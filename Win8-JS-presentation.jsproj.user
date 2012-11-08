@@ -4,4 +4,7 @@
     <ReferenceCachePath>C:\Users\jkap\AppData\Local\Temp\ozs53efx_Win8-JS-presentation_refcache</ReferenceCachePath>
     <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>AppHostLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
 </Project>

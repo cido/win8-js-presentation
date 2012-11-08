@@ -14,6 +14,7 @@
 	<script src="presentation/js/jquery.easing.1.3.js"></script>
 	<script src="presentation/js/jquery.scrollorama.js"></script>
 	<script src="presentation/js/jquery.scrolldeck.js"></script>
+
 </head>
 <body>
 
@@ -215,23 +216,76 @@
 		</div>
 	</div>
 	
+	<div id="app-bar" data-win-control="WinJS.UI.AppBar" data-win-options="">
+        <button data-win-control="WinJS.UI.AppBarCommand" 
+            data-win-options="{id:'cmdCamera',label:'Foo',icon:'camera',section:'selection',tooltip:'Take a picture'}">
+        </button>
+        <button data-win-control="WinJS.UI.AppBarCommand" 
+            data-win-options="{id:'cmdAdd',label:'Bar',icon:'add',section:'global',tooltip:'Add item'}">
+        </button>
+        <button data-win-control="WinJS.UI.AppBarCommand" 
+            data-win-options="{id:'cmdRemove',label:'Foo',icon:'remove',section:'global',tooltip:'Remove item'}">
+        </button>
+        <hr data-win-control="WinJS.UI.AppBarCommand" 
+            data-win-options="{type:'separator',section:'global'}" />
+        <button data-win-control="WinJS.UI.AppBarCommand" 
+            data-win-options="{id:'cmdDelete',label:'Bar',icon:'delete',section:'global',tooltip:'Delete item'}">
+        </button>
+    </div>
+
 	<!--[if !IE]><!--><script>if(/*@cc_on!@*/false||window.Windows){document.documentElement.className+=' ie10';}</script><!--<![endif]-->
 
 	<script>
 		$(document).ready(function() {
 			
+            // Vertical alignment of things
 			$('.vcenter').each(function (index, element) {
 				$(element).html('<div class="vcenter-helper">' + $(element).html() +'</div>');
 			})
 
+            // Modify the windows start menu slide, if we are actually giving the presentation here
+			if (window.Windows) {
+				$('#start-menu').attr("id","windows-key");
+			}
+
+			if (window.Windows) {
+
+			    // Import WinJS stuff
+			    var headID = $('head')[0];
+			    var cssNode = document.createElement('link');
+			    cssNode.rel = 'stylesheet';
+			    cssNode.href = '//Microsoft.WinJS.1.0/css/ui-light.css';
+			    headID.appendChild(cssNode);
+			    var base = document.createElement('script');
+			    base.type = 'text/javascript';
+			    base.src = '//Microsoft.WinJS.1.0/js/base.js';
+			    headID.appendChild(base);
+			    var ui = document.createElement('script');
+			    ui.type = 'text/javascript';
+			    ui.src = '//Microsoft.WinJS.1.0/js/ui.js';
+			    headID.appendChild(ui);
+
+                // Enable sharing
+				Windows.ApplicationModel.DataTransfer.DataTransferManager.getForCurrentView().addEventListener("datarequested", function (e) {
+					var request = e.request;
+				    request.data.properties.title = "Sharing is easy!";
+				    request.data.properties.description = "...and the audience keeps nodding...";
+				    request.data.setText("Hey @trewebdev crew, your event is awesome! BTW, did you notice, I'm tweeting from the actual presentation itself!?!");
+				    //request.data.setText("Test message xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx");
+				});
+
+                // Process all needed elements from body (appbar)
+				WinJS.UI.processAll($('body')[0]);
+			} else {
+                // This is not metro! Hide the appbar element quickly!
+				$('#app-bar').hide();
+			}
+
+            // Create the actual presentation
 			var deck = new $.scrolldeck({
 				buttons: '.nav-button',
 				easing: 'easeOutExpo'
 			});
-
-			if (window.Windows) {
-				$('#start-menu').attr("id","windows-key");
-			}
 			
 		});
 	</script>
