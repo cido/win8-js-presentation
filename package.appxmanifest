@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="55dca811-7bd8-4be0-b108-d2f27bef8ef9" Version="1.0.0.0" Publisher="CN=jkap" />
+  <Properties>
+    <DisplayName>Win8-JS-presentation</DisplayName>
+    <PublisherDisplayName>jkap</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="presentation/index.html">
+      <VisualElements DisplayName="Win8-JS-presentation" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="Win8-JS-presentation" ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="allLogos" />
+        <SplashScreen Image="images\splashscreen.png" />
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

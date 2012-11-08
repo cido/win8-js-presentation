@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="author" content="John Polacek" />
+	<title>What The Heck Is Responsive Web Design?</title>
+	
+	<!--<link href='http://fonts.googleapis.com/css?family=Corben:400,700' rel='stylesheet' type='text/css'>-->
+	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery.scrollTo-1.4.3.1.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.scrollorama.js"></script>
+	<script src="js/jquery.scrolldeck.js"></script>
+</head>
+<body>
+
+	<footer>
+		<h1>Windows 8 + JS: Does it really suck? <span class="not-so-important">presented on November 10th 2012 at <a href="http://treweb.net/">treweb</a></span></h1>
+		<h2>
+			<a href="http://www.kaplas.net/">Jouni Kaplas</a>
+			<span class="not-so-important">from</span>
+			<a href="http://www.futurice.com/">Futurice</a>
+		</h2>
+	</footer>
+
+	<div class="slide" id="hero">
+		<!-- no content, just a background image -->
+	</div>
+
+	<div class="slide" id="metrosexual-socks">
+		<!-- no content, just a background image -->
+	</div>
+
+	<div class="slide vcenter" id="start-menu"><!-- ID may be changed to 'windows-key' as well -->
+		<h2>[demo time! start menu and marco polo]</h2>
+	</div>
+
+	<div class="slide vcenter">
+		<h1>It's an IE10 without chrome</h1>
+		<h2 class="animate-build" data-build="1">
+			And FYI, it's a <span class="green-2">fabulous</span> browser
+		</h2>
+	</div>
+
+	<div class="slide vcenter crowded">
+		<h1>
+			Windows 8 is practically the first <span class="green-1">serious</span> platform, which supports JavaScript apps <span class="green-2">natively</span>.
+		</h1>
+	</div>
+
+	<div class="slide vcenter">
+		<h1>Special global objects</h1>
+		<ul>
+			<li>WinJS (~50 KLOC of JS)</li>
+			<li>Windows (platform APIs)</li>
+		</ul>
+	</div>
+
+	<div class="slide vcenter">
+		<h1>Constraints</h1>
+		<ul>
+			<li>From operating system (eg. max memory consumption)</li>
+			<li>From Windows Store quality assurance process</li>
+			<li>From the ugly truth that JS is not (yet) truly a first class citizen</li>
+		</ul>
+	</div>
+
+	<div class="slide" id="things-i-liked">
+		<!-- no content, just a background image -->
+	</div>
+
+	<div class="slide vcenter crowded">
+		<h1>
+			Visual Studio with on-device debugging. And the normal debugger as well.
+		</h1>
+	</div>
+
+	<div class="slide bullet-list-with-side-title">
+		<h1>
+			CSS3 support in IE10
+		</h1>
+		<ul>
+			<li>Regions</li>
+			<li>Multi-column layout</li>
+			<li>Flexbox</li>
+			<li>Transitions</li>
+			<li>MS-specific snap guides</li>
+			<li>MS-grid<ul>
+				<li>fdsafdas</li>
+			</ul></li>
+		</ul>
+	</div>
+
+	<div class="slide bullet-list-with-side-title">
+		<h1>
+			Ease of implementation
+		</h1>
+		<ul>
+			<li>Appbar commands</li>
+			<li>Live tile</li>
+			<li>Sharing</li>
+			<li>Settings panel</li>
+			<li>i18n</li>
+		</ul>
+	</div>
+
+	<div class="slide vcenter crowded">
+		<h1>
+			Smooth operation andquite a lightweight footprint.
+		</h1>
+	</div>
+
+	<div class="slide" id="things-i-did-not-like">
+		<!-- no content, just a background image -->
+	</div>
+
+	<div class="slide vcenter">
+		<h1>
+			APIs are usually quite cumbersome
+		</h1>
+<blockquote><pre>internetIsAvailable: function () {
+
+    var connectionProfile =
+        Windows.Networking.Connectivity.NetworkInformation.getInternetConnectionProfile();
+    var currentStatus;
+
+    if (connectionProfile.getNetworkConnectivityLevel) {
+        currentStatus = connectionProfile.getNetworkConnectivityLevel();
+    }
+
+    return (currentStatus == 
+        Windows.Networking.Connectivity.NetworkConnectivityLevel.internetAccess);
+
+}</pre></blockquote>
+	</div>
+
+	<div class="slide bullet-list-with-side-title">
+		<h1>
+			Lack of
+		</h1>
+		<ul>
+			<li>Advanced UI elements</li>
+			<li>Better MVVM / MVC / what ever implementation</li>
+			<li>More in-depth examples and documentation</li>
+			<li>Testability</li>
+		</ul>
+	</div>
+
+	<div class="slide vcenter" id="screen-sizes">
+		<div>
+			<img src="images/screen-sizes.jpg" />
+			<div class="texts">
+				<h1>Scaling to different screen sizes, DPI, input devices</h1>
+				<h2>(sometimes even on the very same device)</h2>
+				<p class="copyright">
+					Image copied from
+					<a href="Image copied from http://msdn.microsoft.com/en-us/library/windows/apps/hh780612.aspx">
+					http://msdn.microsoft.com/en-us/library/windows/apps/hh780612.aspx
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="slide" id="verdict">
+		<!-- no content, just a background image -->
+	</div>
+
+	<div class="slide bullet-list-with-side-title">
+		<h1>
+			Things to consider
+		</h1>
+		<ul>
+			<li>Not too many contenders in the app space</li>
+			<li>JavaScript fits very well for development of webish apps</li>
+			<li>Windows 8 market penetration</li>
+		</ul>
+	</div>
+
+	<div class="slide vcenter crowded">
+		<h1>
+			So...
+		</h1>
+	</div>
+
+	<div class="slide vcenter crowded">
+		<h1>
+			I think Windows 8 is a platform big enough for the effort
+		</h1>
+	</div>
+
+	<div class="slide vcenter crowded">
+		<h1>
+			Creating Windows 8 apps with JS is not the easiest thing out there
+		</h1>
+		<h1 class="pink animate-build" data-build="1">
+			...but it doesn't suck too much
+		</h1>
+	</div>
+
+	<div class="slide" id="thank-you">
+		<p>
+			You can find me at:<br />
+			<img src="images/twitter.png" /><a href="https://www.twitter.com/JouniKaplas/">@JouniKaplas</a><br />
+			<img src="images/movember.png" /><a href="htts://mobro.co/imhairybutstillhandsome/">mobro.co/imhairybutstillhandsome</a>
+		</p>
+	</div>
+	
+	<!--[if !IE]><!--><script>if(/*@cc_on!@*/false||window.Windows){document.documentElement.className+=' ie10';}</script><!--<![endif]-->
+
+	<script>
+		$(document).ready(function() {
+			
+			$('.vcenter').each(function (index, element) {
+				$(element).html('<div class="vcenter-helper">' + $(element).html() +'</div>');
+			})
+
+			var deck = new $.scrolldeck({
+				buttons: '.nav-button',
+				easing: 'easeOutExpo'
+			});
+
+			if (window.Windows) {
+				$('#start-menu').attr("id","windows-key");
+			}
+			
+		});
+	</script>
+
+</body></html>
