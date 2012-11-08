@@ -234,7 +234,7 @@ footer .not-so-important {
 
 /* line 210, ../sass/style.scss */
 #metrosexual-socks {
-  background-image: url('../images/metrosexual-socks.png?1352316715');
+  background-image: url('../images/metrosexual-socks.png?1352397738');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
@@ -307,81 +307,85 @@ footer .not-so-important {
   z-index: 20;
 }
 /* line 257, ../sass/style.scss */
-#thank-you p {
+#thank-you .texts {
   position: absolute;
-  top: 58%;
+  bottom: 10%;
   left: 43%;
   text-align: left;
 }
 /* line 262, ../sass/style.scss */
-#thank-you p img {
+#thank-you .texts p {
+  margin: 0 0 0.5em 0;
+}
+/* line 265, ../sass/style.scss */
+#thank-you .texts img {
   vertical-align: middle;
 }
 
 /*------------------------  BASE-REM SIZING  */
 @media (min-width: 1520px) {
-  /* line 272, ../sass/style.scss */
+  /* line 275, ../sass/style.scss */
   html {
     font-size: 12px;
   }
 }
 @media (max-width: 1400px) {
-  /* line 278, ../sass/style.scss */
+  /* line 281, ../sass/style.scss */
   html {
     font-size: 11px;
   }
 }
 /* target screen width  */
 @media (max-width: 1280px) {
-  /* line 285, ../sass/style.scss */
+  /* line 288, ../sass/style.scss */
   html {
     font-size: 10px;
   }
 }
 @media (max-width: 1160px) {
-  /* line 291, ../sass/style.scss */
+  /* line 294, ../sass/style.scss */
   html {
     font-size: 9px;
   }
 }
 @media (max-width: 1040px) {
-  /* line 297, ../sass/style.scss */
+  /* line 300, ../sass/style.scss */
   html {
     font-size: 8px;
   }
 }
 @media (max-width: 920px) {
-  /* line 303, ../sass/style.scss */
+  /* line 306, ../sass/style.scss */
   html {
     font-size: 7px;
   }
 }
 @media (max-width: 800px) {
-  /* line 309, ../sass/style.scss */
+  /* line 312, ../sass/style.scss */
   html {
     font-size: 6px;
   }
 }
 @media (max-width: 680px) {
-  /* line 315, ../sass/style.scss */
+  /* line 318, ../sass/style.scss */
   html {
     font-size: 5px;
   }
 }
 @media (max-width: 560px) {
-  /* line 321, ../sass/style.scss */
+  /* line 324, ../sass/style.scss */
   html {
     font-size: 4px;
   }
 }
 @media (max-width: 440px) {
-  /* line 327, ../sass/style.scss */
+  /* line 330, ../sass/style.scss */
   html {
     font-size: 3px;
   }
 }
 @media (max-width: 320px) {
-  /* line 333, ../sass/style.scss */
+  /* line 336, ../sass/style.scss */
   html {
     font-size: 3px;
   }

@@ -1,4 +1,4 @@
-@import "compass/utilities/links/link-colors";
+@import "compass/typography/links/link-colors";
 
 html {
 	font-size: 10px;
@@ -254,11 +254,14 @@ footer {
 	@include slide-with-background-image("thank-you.png");
 	z-index: 20;
 
-	p {
+	.texts {
 		position: absolute;
-		top: 58%;
+		bottom: 10%;
 		left: 43%;
 		text-align: left;
+		p {
+			margin: 0 0 0.5em 0;
+		}
 		img {
 			vertical-align: middle;
 		}
