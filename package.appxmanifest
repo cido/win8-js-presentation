@@ -15,8 +15,8 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="index.html">
-      <VisualElements DisplayName="Win8-JS-presentation" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="Win8-JS-presentation" ForegroundText="light" BackgroundColor="#464646">
-        <DefaultTile ShowName="allLogos" />
+      <VisualElements DisplayName="Win8 + JS presentation" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="Win8 + JS presentation at treweb 2|12" ForegroundText="dark" BackgroundColor="#D9D9D9">
+        <DefaultTile ShowName="noLogos" />
         <SplashScreen Image="images\splashscreen.png" />
       </VisualElements>
     </Application>

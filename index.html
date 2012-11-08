@@ -248,6 +248,16 @@
 				$('#start-menu').attr("id","windows-key");
 			}
 
+			function getTileUpdater() {
+			    if (!(window.cachedTileUpdater)) {
+			        window.cachedTileUpdater = Windows.UI.Notifications.TileUpdateManager.createTileUpdaterForApplication();
+			        window.cachedTileUpdater.enableNotificationQueue(true);
+			    }
+			    return window.cachedTileUpdater;
+			}
+
+			window.updateLiveTiles = function () { /* empty implementation for non-metro environments */ }
+
 			if (window.Windows) {
 
 			    // Import WinJS stuff
@@ -273,6 +283,38 @@
 				    request.data.setText("Hey @trewebdev crew, your event is awesome! BTW, did you notice, I'm tweeting from the actual presentation itself!?!");
 				    //request.data.setText("Test message xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx xx xxxx");
 				});
+
+			    // Live tile updates
+
+				window.updateLiveTiles = function (slideNumber, totalNumberOfSlides) {
+				    if (slideNumber !== totalNumberOfSlides) {
+				        var imageXml = Windows.UI.Notifications.TileUpdateManager.getTemplateContent(Windows.UI.Notifications.TileTemplateType.tileSquareImage);
+				        var imageElements = imageXml.getElementsByTagName("image");
+				        imageElements[0].setAttribute('src', '/images/logo.png');
+
+				        var tileNotification = new Windows.UI.Notifications.TileNotification(imageXml);
+				        tileNotification.tag = 'jouni1';
+				        var expirationTime = new Date();
+				        expirationTime.setFullYear((new Date()).getFullYear() + 1);
+				        tileNotification.expirationTime = expirationTime;
+				        getTileUpdater().update(tileNotification);
+
+				        var textXml = Windows.UI.Notifications.TileUpdateManager.getTemplateContent(Windows.UI.Notifications.TileTemplateType.tileSquareBlock);
+				        var textElements = textXml.getElementsByTagName("text");
+				        textElements[0].appendChild(textXml.createTextNode(slideNumber));
+				        textElements[1].appendChild(textXml.createTextNode("Slide number"));
+
+				        tileNotification = new Windows.UI.Notifications.TileNotification(textXml);
+				        tileNotification.tag = 'jouni2';
+				        var expirationTime = new Date();
+				        expirationTime.setFullYear((new Date()).getFullYear() + 1);
+				        tileNotification.expirationTime = expirationTime;
+				        getTileUpdater().update(tileNotification);
+				    } else {
+				        getTileUpdater().clear();
+				    }
+				}
+				window.updateLiveTiles("1");
 
                 // Process all needed elements from body (appbar)
 				WinJS.UI.processAll($('body')[0]);

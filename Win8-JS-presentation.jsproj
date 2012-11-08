@@ -58,8 +58,6 @@
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
     <Content Include="index.html" />
-    <Content Include="js\default.js" />
-    <Content Include="css\default.css" />
     <Content Include="presentation\.sass-cache\9c6ecccf0cc9b3122e375535c783922d6933cd0a\_link-colors.scssc" />
     <Content Include="presentation\.sass-cache\b472e300bd5175552923d332090b2046789ca922\normalize.scssc" />
     <Content Include="presentation\.sass-cache\b472e300bd5175552923d332090b2046789ca922\style.scssc" />

@@ -103,7 +103,8 @@
 			// event handler for updating current slide index and current nav button
 			scrolldeck.controller.onBlockChange(function() {
 				// get slide index
-				currIndex = scrolldeck.controller.blockIndex;
+			    currIndex = scrolldeck.controller.blockIndex;
+			    window.updateLiveTiles(currIndex + 1, slides.length);
 				
 				// then update nav
 				updateNav();
