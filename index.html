@@ -265,7 +265,7 @@
 			    var cssNode = document.createElement('link');
 			    cssNode.rel = 'stylesheet';
 			    cssNode.href = '//Microsoft.WinJS.1.0/css/ui-light.css';
-			    headID.appendChild(cssNode);
+			    headID.insertBefore(cssNode, $('head title')[0]);
 			    var base = document.createElement('script');
 			    base.type = 'text/javascript';
 			    base.src = '//Microsoft.WinJS.1.0/js/base.js';
