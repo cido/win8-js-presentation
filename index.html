@@ -132,11 +132,11 @@
         Windows.Networking.Connectivity.NetworkInformation.getInternetConnectionProfile();
     var currentStatus;
 
-    if (connectionProfile.getNetworkConnectivityLevel) {
+    if (typeof connectionProfile !== undefined) {
         currentStatus = connectionProfile.getNetworkConnectivityLevel();
     }
 
-    return (currentStatus == 
+    return (currentStatus === 
         Windows.Networking.Connectivity.NetworkConnectivityLevel.internetAccess);
 
 }</pre></blockquote>
@@ -320,14 +320,14 @@
 				}
 				window.updateLiveTiles("1");
 
-                // Process all needed elements from body (appbar)
+                // Process all needed elements from body (ie. the appbar)
 				WinJS.UI.processAll($('body')[0]);
 			} else {
                 // This is not metro! Hide the appbar element quickly!
 				$('#app-bar').hide();
 			}
 
-            // Create the actual presentation
+            // Initialize the actual presentation
 			var deck = new $.scrolldeck({
 				buttons: '.nav-button',
 				easing: 'easeOutExpo'

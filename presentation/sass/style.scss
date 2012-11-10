@@ -277,6 +277,35 @@ footer {
 
 /*------------------------  BASE-REM SIZING  */
 
+@media (min-width: 2120px) {
+	html {
+		font-size: 17px;
+	}
+}
+
+@media (min-width: 2000px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 1880px) {
+	html {
+		font-size: 15px;
+	}
+}
+
+@media (min-width: 1760px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 1640px) {
+	html {
+		font-size: 13px;
+	}
+}
 
 @media (min-width: 1520px) {
 	html {

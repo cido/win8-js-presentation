@@ -330,69 +330,99 @@ footer .not-so-important {
 }
 
 /*------------------------  BASE-REM SIZING  */
+@media (min-width: 2120px) {
+  /* line 281, ../sass/style.scss */
+  html {
+    font-size: 17px;
+  }
+}
+@media (min-width: 2000px) {
+  /* line 287, ../sass/style.scss */
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1880px) {
+  /* line 293, ../sass/style.scss */
+  html {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1760px) {
+  /* line 299, ../sass/style.scss */
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1640px) {
+  /* line 305, ../sass/style.scss */
+  html {
+    font-size: 13px;
+  }
+}
 @media (min-width: 1520px) {
-  /* line 282, ../sass/style.scss */
+  /* line 311, ../sass/style.scss */
   html {
     font-size: 12px;
   }
 }
 @media (max-width: 1400px) {
-  /* line 288, ../sass/style.scss */
+  /* line 317, ../sass/style.scss */
   html {
     font-size: 11px;
   }
 }
 /* target screen width  */
 @media (max-width: 1280px) {
-  /* line 295, ../sass/style.scss */
+  /* line 324, ../sass/style.scss */
   html {
     font-size: 10px;
   }
 }
 @media (max-width: 1160px) {
-  /* line 301, ../sass/style.scss */
+  /* line 330, ../sass/style.scss */
   html {
     font-size: 9px;
   }
 }
 @media (max-width: 1040px) {
-  /* line 307, ../sass/style.scss */
+  /* line 336, ../sass/style.scss */
   html {
     font-size: 8px;
   }
 }
 @media (max-width: 920px) {
-  /* line 313, ../sass/style.scss */
+  /* line 342, ../sass/style.scss */
   html {
     font-size: 7px;
   }
 }
 @media (max-width: 800px) {
-  /* line 319, ../sass/style.scss */
+  /* line 348, ../sass/style.scss */
   html {
     font-size: 6px;
   }
 }
 @media (max-width: 680px) {
-  /* line 325, ../sass/style.scss */
+  /* line 354, ../sass/style.scss */
   html {
     font-size: 5px;
   }
 }
 @media (max-width: 560px) {
-  /* line 331, ../sass/style.scss */
+  /* line 360, ../sass/style.scss */
   html {
     font-size: 4px;
   }
 }
 @media (max-width: 440px) {
-  /* line 337, ../sass/style.scss */
+  /* line 366, ../sass/style.scss */
   html {
     font-size: 3px;
   }
 }
 @media (max-width: 320px) {
-  /* line 343, ../sass/style.scss */
+  /* line 372, ../sass/style.scss */
   html {
     font-size: 3px;
   }
